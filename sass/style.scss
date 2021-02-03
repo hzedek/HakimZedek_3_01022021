@@ -1,0 +1,23 @@
+@mixin center{
+    display: flex;
+    justify-content: center;
+  }
+
+body{
+    margin:20px 0;
+}
+header{
+    @include center;
+}
+h1{
+    text-align: center;
+    margin: auto 20%;
+    +p{
+        margin:auto 10%;
+        text-align: center;
+    }
+}
+figure img {
+    width: 300px;
+    height: 200px;
+}
