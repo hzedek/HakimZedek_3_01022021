@@ -1,8 +1,27 @@
+@font-face {
+  font-family: 'robotoregular';
+  src: url("roboto_regular_macroman/Roboto-Regular-webfont.eot");
+  src: url("roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("roboto_regular_macroman/Roboto-Regular-webfont.woff2") format("woff2"), url("roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff"), url("roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype"), url("roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'shrikhandregular';
+  src: url("shrikhand/shrikhand-regular-webfont.eot");
+  src: url("shrikhand/shrikhand-regular-webfont.eot?#iefix") format("embedded-opentype"), url("shrikhand/shrikhand-regular-webfont.woff2") format("woff2"), url("shrikhand/shrikhand-regular-webfont.woff") format("woff"), url("shrikhand/shrikhand-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  margin: 20px 0;
+  margin: 0;
+  position: relative;
+  font-family: 'robotoregular', Arial, Helvetica, sans-serif;
 }
 
 header {
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,6 +29,11 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  position: relative;
+}
+
+header a {
+  color: black;
 }
 
 .search {
@@ -22,7 +46,7 @@ header {
   text-align: center;
   border: transparent;
   border-top: 3px solid #bebebe;
-  background: rgba(216, 216, 216, 0.548);
+  background: rgba(216, 216, 216, 0.801);
   padding: 15px;
   margin-bottom: 0px;
 }
@@ -33,13 +57,13 @@ header {
 
 h2 {
   width: 340px;
-  margin: 35px auto 20px;
+  margin: 35px auto 25px;
 }
 
 .container {
   border: transparent;
-  background-color: rgba(245, 245, 245, 0.993);
-  padding: 40px 10px 40px 10px;
+  background-color: #eeeeee;
+  padding: 40px 10px 60px 10px;
 }
 
 .container h1, .container p {
@@ -53,8 +77,9 @@ h2 {
 }
 
 .container p {
+  font-size: 18px;
   margin: 0px 15px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .container h1 {
@@ -64,24 +89,27 @@ h2 {
 
 .container button {
   border: transparent;
-  background-color: #9356DC;
-  color: white;
-  padding: 12px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: auto;
   -webkit-box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.212);
           box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.212);
-  font-size: 12px;
-  border-radius: 25px;
+  border: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e56ddbd0), color-stop(#dc69dcd0), color-stop(#d266dccb), color-stop(#ca63dcd0), color-stop(#c160dcd2), color-stop(#b65ddccc), color-stop(#ab5bdcd0), color-stop(#9e58dcc9), to(#9256dcc4));
+  background-image: linear-gradient(to bottom, #e56ddbd0, #dc69dcd0, #d266dccb, #ca63dcd0, #c160dcd2, #b65ddccc, #ab5bdcd0, #9e58dcc9, #9256dcc4);
+  color: white;
+  padding: 16px 20px;
+  font-size: 18px;
+  border-radius: 30px;
 }
 
-.layout1 {
-  display: block;
+.layoutFonctionnement {
+  margin-bottom: 70px;
 }
 
-.layout1 button {
+.layoutFonctionnement button {
+  border: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,17 +128,17 @@ h2 {
   padding: 10px 15px 10px 30px;
 }
 
-.layout1 button:hover {
+.layoutFonctionnement button:hover {
   background-color: #9256dc28;
   color: #9356DC;
 }
 
-.layout1 button .fa-mobile-alt {
+.layoutFonctionnement button .fa-mobile-alt {
   font-size: 20px;
   margin-left: 4px;
 }
 
-.layout1 button span {
+.layoutFonctionnement button span {
   border: 2px solid transparent;
   color: white;
   background-color: #9356DC;
@@ -122,7 +150,7 @@ h2 {
   bottom: 25px;
 }
 
-.layout1 button p {
+.layoutFonctionnement button p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,15 +159,20 @@ h2 {
 
 .container2 {
   border: transparent;
-  background-color: rgba(245, 245, 245, 0.993);
+  background-color: #eeeeee;
   padding-top: 20px;
+  padding-bottom: 50px;
 }
 
 .container2 figure {
   margin: auto;
   width: 340px;
   border: transparent;
-  background-color: white;
+  -webkit-box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.212);
+          box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.212);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .container2 figure img {
@@ -147,7 +180,166 @@ h2 {
   height: 200px;
 }
 
+figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+figcaption div {
+  display: block;
+  margin-left: 15px;
+  margin-top: -10px;
+}
+
 figcaption h3 {
+  margin-bottom: -13px;
+}
+
+figcaption .fa-heart {
+  font-size: 22px;
+  position: absolute;
+  bottom: 30px;
+  left: 300px;
+}
+
+footer {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.712);
+  width: 100%;
+  color: white;
+  padding-bottom: 20px;
+}
+
+footer ul {
+  width: 340px;
+  margin: auto;
+}
+
+footer li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+footer li:first-child {
+  font-family: 'shrikhandregular';
+  font-size: 20px;
+}
+
+footer .fa-utensils {
+  margin-right: 18px;
+}
+
+footer .fa-hands-helping {
+  font-size: 13px;
+  margin-right: 15px;
+}
+
+/*PAGE RESTAURANT*/
+.fa-arrow-left {
+  position: absolute;
+  left: 20px;
+  bottom: 8px;
+  font-size: 22px;
+}
+
+.restaurantPage img {
+  margin-top: 10px;
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 9;
+}
+
+.restaurantPage .menuLayout {
+  margin-top: -50px;
+  padding-bottom: 40px;
+  border: transparent;
+  background-color: #eeeeee;
+  z-index: 15;
+  position: relative;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.restaurantPage .menuLayout .restaurantName {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 340px;
+  margin: 0px auto;
+  margin-bottom: -40px;
+  padding-top: 15px;
+}
+
+.restaurantPage .menuLayout .restaurantName:first-child {
+  font-family: 'shrikhandregular';
+  font-size: 27px;
+}
+
+.restaurantPage .menuLayout .restaurantName .fa-heart {
+  font-size: 26px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.restaurantPage .menuLayout button {
+  border: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.212);
+          box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.212);
+  margin: 60px auto 0px;
+  color: white;
+  font-size: 18px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e56ddbd0), color-stop(#dc69dcd0), color-stop(#d266dccb), color-stop(#ca63dcd0), color-stop(#c160dcd2), color-stop(#b65ddccc), color-stop(#ab5bdcd0), color-stop(#9e58dcc9), to(#9256dcc4));
+  background-image: linear-gradient(to bottom, #e56ddbd0, #dc69dcd0, #d266dccb, #ca63dcd0, #c160dcd2, #b65ddccc, #ab5bdcd0, #9e58dcc9, #9256dcc4);
+  padding: 10px 30px;
+  border-radius: 40px;
+}
+
+h5 {
+  width: 340px;
+  font-weight: lighter;
+  font-size: 16px;
+  margin: 50px auto;
+}
+
+.menuContainer {
+  border: transparent;
+  background-color: white;
+  width: 340px;
+  height: 70px;
+  padding-left: 10px;
+  border-radius: 18px;
+  position: relative;
+  display: block;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: -20px auto;
+}
+
+.menuContainer h6 {
+  font-size: 16px;
+  font-weight: bold;
   margin-bottom: -10px;
+  padding-top: 10px;
+}
+
+.menuContainer p {
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.menuContainer p:last-child {
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
 }
 /*# sourceMappingURL=style.css.map */
