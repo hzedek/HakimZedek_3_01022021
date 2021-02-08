@@ -37,10 +37,12 @@
   }
     $primary:#9356DC;
     $secondary:#FF79DA;
-    $thirdr:#99E2D0;
+    $third:#99E2D0;
     $darkgrey:rgb(238, 238, 238);
     $widthTle:340px;
     $boxshadow:0px 5px 9px rgba(0, 0, 0, 0.212);
+    $animDur:1000ms;
+    $animDelay:$animDur/4;
 body{
     margin: 0;
     position: relative;
@@ -166,6 +168,10 @@ figcaption{
         position: absolute;
         bottom: 30px;
         left: 300px;
+        
+        :hover{
+
+        }
     }
 }
 footer{
@@ -245,11 +251,16 @@ footer{
     }    
     }   
 }
-h5{
+.border{
+    margin: 50px auto 30px;
     width: $widthTle;
+}
+h5{
     font-weight: lighter;
-    font-size: 16px;
-    margin: 50px auto;
+    font-size: 17px;
+    border-bottom: 3px solid $third;
+    padding-bottom: 5px ;
+    width: 35px;
 }
 .menuContainer{
     border:transparent;
@@ -262,6 +273,14 @@ h5{
     display: block;
     justify-content: space-around;
     margin: -20px auto;
+    animation: menuContainer 1000ms;
+    transform-origin: 0% bottom;
+    opacity: 0%;
+    animation-fill-mode:forwards;
+    @for $i from 1 through 4{
+        &--#{$i} {
+            animation-delay: $animDelay * $i;
+         }}
     h6{
         font-size: 16px;
         font-weight: bold;
@@ -276,5 +295,26 @@ h5{
             bottom: 0px;
             right: 20px;
         }
+    }
+}
+
+@keyframes menuContainer{
+    0% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    17% {
+        transform: scaleY(.18);
+    }
+    24% {
+        transform: scaleY(.4);
+    }
+    46% {
+        transform: scaleY(.81);
+        opacity: .1;
+    }
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
     }
 }
