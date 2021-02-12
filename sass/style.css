@@ -133,6 +133,10 @@ h2 {
   color: #9356DC;
 }
 
+.layoutFonctionnement button:hover p {
+  color: black;
+}
+
 .layoutFonctionnement button .fa-mobile-alt {
   font-size: 20px;
   margin-left: 4px;
@@ -185,6 +189,12 @@ figcaption {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 figcaption div {
@@ -197,11 +207,19 @@ figcaption h3 {
   margin-bottom: -13px;
 }
 
-figcaption .fa-heart {
-  font-size: 22px;
-  position: absolute;
-  bottom: 30px;
-  left: 300px;
+figcaption svg {
+  fill: #9356DC;
+  fill-opacity: 0%;
+  stroke: black;
+  stroke-width: 20px;
+  height: 23px;
+  overflow: visible;
+  margin-right: 20px;
+}
+
+figcaption svg:hover {
+  -webkit-animation: heart 1s both;
+          animation: heart 1s both;
 }
 
 footer {
@@ -213,7 +231,6 @@ footer {
 }
 
 footer ul {
-  width: 340px;
   margin: auto;
 }
 
@@ -244,6 +261,11 @@ footer .fa-hands-helping {
   font-size: 22px;
 }
 
+article {
+  width: 340px;
+  margin: 0 auto;
+}
+
 .restaurantPage img {
   margin-top: 10px;
   width: 100%;
@@ -251,10 +273,10 @@ footer .fa-hands-helping {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 9;
+  margin-bottom: -50px;
 }
 
 .restaurantPage .menuLayout {
-  margin-top: -50px;
   padding-bottom: 40px;
   border: transparent;
   background-color: #eeeeee;
@@ -265,14 +287,16 @@ footer .fa-hands-helping {
 }
 
 .restaurantPage .menuLayout .restaurantName {
-  position: relative;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 340px;
   margin: 0px auto;
-  margin-bottom: -40px;
   padding-top: 15px;
+  position: relative;
 }
 
 .restaurantPage .menuLayout .restaurantName:first-child {
@@ -280,11 +304,19 @@ footer .fa-hands-helping {
   font-size: 27px;
 }
 
-.restaurantPage .menuLayout .restaurantName .fa-heart {
-  font-size: 26px;
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
+.restaurantPage .menuLayout .restaurantName svg {
+  fill: #9356DC;
+  fill-opacity: 0%;
+  stroke: black;
+  stroke-width: 20px;
+  height: 23px;
+  overflow: visible;
+  margin-left: 50px;
+}
+
+.restaurantPage .menuLayout .restaurantName svg:hover {
+  -webkit-animation: heart 1s both;
+          animation: heart 1s both;
 }
 
 .restaurantPage .menuLayout button {
@@ -304,17 +336,13 @@ footer .fa-hands-helping {
   border-radius: 40px;
 }
 
-.border {
-  margin: 50px auto 30px;
-  width: 340px;
-}
-
 h5 {
   font-weight: lighter;
   font-size: 17px;
   border-bottom: 3px solid #99E2D0;
   padding-bottom: 5px;
-  width: 35px;
+  width: 45px;
+  margin-top: 30px;
 }
 
 .menuContainer {
@@ -326,9 +354,9 @@ h5 {
   border-radius: 18px;
   position: relative;
   display: block;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin: -20px auto;
+  margin: 20px 0;
+  -webkit-box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.212);
+          box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.212);
   -webkit-animation: menuContainer 1000ms;
           animation: menuContainer 1000ms;
   -webkit-transform-origin: 0% bottom;
@@ -361,6 +389,7 @@ h5 {
 .menuContainer h6 {
   font-size: 16px;
   font-weight: bold;
+  margin-top: 0px;
   margin-bottom: -10px;
   padding-top: 10px;
 }
@@ -425,6 +454,38 @@ h5 {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes heart {
+  0% {
+    fill-opacity: 0%;
+  }
+  24% {
+    fill-opacity: 20%;
+  }
+  46% {
+    fill-opacity: 50%;
+  }
+  100% {
+    fill-opacity: 100%;
+    stroke: #9356DC;
+  }
+}
+
+@keyframes heart {
+  0% {
+    fill-opacity: 0%;
+  }
+  24% {
+    fill-opacity: 20%;
+  }
+  46% {
+    fill-opacity: 50%;
+  }
+  100% {
+    fill-opacity: 100%;
+    stroke: #9356DC;
   }
 }
 /*# sourceMappingURL=style.css.map */
