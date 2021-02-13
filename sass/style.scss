@@ -212,10 +212,6 @@ footer{
     bottom: 8px;
     font-size: 22px;
 }
-article{
-    width: $widthTle;
-    margin: 0 auto;
-}
 .restaurantPage{
     img{
         margin-top: 10px;
@@ -236,7 +232,7 @@ article{
             align-items:baseline;
             display: flex;
             width:$widthTle;
-            margin:0px auto;
+            margin:0px auto -20px;
             padding-top: 15px;
             position: relative;
             &:first-child{
@@ -267,13 +263,17 @@ article{
         }    
     }   
 }
-h5{
-    font-weight: lighter;
-    font-size: 17px;
-    border-bottom: 3px solid $third;
-    padding-bottom: 5px ;
-    width: 45px;
-    margin-top: 30px;
+article{
+    width: $widthTle;
+    margin: 0 auto;
+    h5{
+        font-weight: lighter;
+        font-size: 17px;
+        border-bottom: 3px solid $third;
+        padding-bottom: 5px ;
+        width: 45px;
+        margin-top: 40px;
+    }
 }
 .menuContainer{
     border:transparent;
@@ -286,14 +286,10 @@ h5{
     display: block;
     margin: 20px 0;
     box-shadow:$boxshadow ;
-    animation: menuContainer 1000ms;
-    transform-origin: 0% bottom;
+    animation: menuContainer 1000ms forwards;
+    transform-origin: bottom;
     opacity: 0%;
-    animation-fill-mode:forwards;
-    @for $i from 1 through 4{
-        &--#{$i} {
-            animation-delay: $animDelay * $i;
-         }}  
+    overflow: hidden;
     h6{
         font-size: 16px;
         font-weight: bold;
@@ -304,12 +300,50 @@ h5{
     p{
         font-size: 14px;
         font-weight: 100;
-        &:last-child{
-            position: absolute;
-            bottom: 0px;
-            right: 20px;
-        }
     }
+    .price{
+        position: absolute;
+        bottom: 0px;
+        right: 20px;
+        font-weight: bold;
+        transition: transform 1s ;
+        z-index: 59;
+    }
+    .green-slide{
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        border: transparent;
+        width: 70px;
+        height: 80px;
+        background-color: $third;
+        transition: transform 1s;
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+   svg{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+        color: white;
+        z-index: 50;
+        transform:translate(30px) rotate(0deg);
+        transition: transform 1s;
+        }
+    &:hover > .price {
+        transform: translateX(-70px);
+    }
+    &:hover > .green-slide {
+       transform: scaleX(1);
+    }
+    &:hover > svg{
+        transform:translate(0px) rotate(360deg);
+       }
+    @for $i from 1 through 4{
+        &--#{$i} {
+            animation-delay: $animDelay * $i;}}
 }
 
 @keyframes menuContainer{
@@ -346,5 +380,13 @@ h5{
         fill-opacity: 100%;
         stroke: $primary;
     }
-
+}
+@keyframes spin{
+    0% {
+     transform: translateX(30px) rotate(0deg);
+    
+    }
+    100% {
+       transform: translateX(0px) rotate(360deg);
+}
 }
