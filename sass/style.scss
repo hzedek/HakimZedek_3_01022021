@@ -9,7 +9,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'shrikhandregular';
     src: url('shrikhand/shrikhand-regular-webfont.eot');
@@ -35,11 +34,16 @@
     margin: auto;
     box-shadow:0px 5px 9px rgba(0, 0, 0, 0.212);
   }
+  @mixin desktop{
+      @media screen and (min-width: 800px){
+        width:$width-desktop;
+        }
+  }
     $primary:#9356DC;
     $secondary:#FF79DA;
     $third:#99E2D0;
     $darkgrey:rgb(245, 245, 245);
-    $widthTle:340px;
+    $widthTle:335px;
     $boxshadow:0px 5px 9px rgba(0, 0, 0, 0.212);
     $animDur:1000ms;
     $animDelay:$animDur/4;
@@ -66,9 +70,12 @@ footer{
     width: 100%;  
     color: white;
     padding-bottom: 20px;
-    
     ul{
+        width: $widthTle;
         margin:auto;
+            @media screen and (min-width: 600px){
+               width:200px;
+            }
     }
     li{   
         list-style: none;
@@ -94,6 +101,11 @@ footer{
 h2{
     width:$widthTle;
     margin: 35px auto 25px;
+    @media screen and (min-width:1000px){
+        width: 100%;
+        @include center;
+        margin-bottom: 50px;
+        }
 }
 .loader{
     background-color:white;
@@ -178,6 +190,10 @@ h2{
 }
 .layoutFonctionnement{
     margin-bottom: 70px;
+    @media screen and (min-width:1000px){
+        display: flex;
+        flex-wrap: wrap;
+    }
     button{
         @include btn;
         border: transparent;
@@ -187,12 +203,16 @@ h2{
         width: 330px;
         position: relative;
         align-items: baseline;
-        padding:10px 15px 10px 30px;
+        padding:25px 15px 25px 30px;
         color: grey;
+        @media screen and (min-width:1000px){
+            width: 30%;
+            padding: 2% 2% 2% 3%;
+        }
             &:hover{
                 background-color: #9256dc28 ;
                 color: $primary;
-                p{
+                .text{
                     color: black;
                 }
             }
@@ -200,7 +220,7 @@ h2{
         font-size:20px;
         margin-left: 4px;
         }
-        span{
+        .numbers{
             border: 2px solid transparent;
             color: white;
             background-color:$primary;
@@ -211,10 +231,10 @@ h2{
             left: -8px;
             bottom: 25px;
         }
-        p{
+        .text{
             display: flex;
             margin-left: 30px;
-            color: black
+            color: black;
         }
     }
 }
@@ -222,6 +242,10 @@ h2{
     @include container;
     padding-top:20px ;
     padding-bottom: 50px;
+    @media screen and (min-width: 1000px){
+        display: flex;
+        flex-wrap: wrap;
+    }
     figure{
         margin: auto;
         width: $widthTle;
@@ -231,6 +255,11 @@ h2{
         margin-bottom: 20px;
         overflow: hidden;
         position: relative;
+        @media screen and (min-width: 800px){
+            width: 40%;
+            height: 20%;
+            margin: 2% auto;
+        }
         .new{
             border: transparent;
             padding: 5px 10px;
@@ -245,6 +274,9 @@ h2{
             width: $widthTle;
             height: 200px;
             object-fit: cover;
+            @media screen and (min-width: 800px){
+                width: 100%;
+            }
         }    
     }    
 }
@@ -291,6 +323,9 @@ figcaption{
         object-fit: cover;
         z-index: 9;
         margin-bottom: -50px;
+        @media screen and (min-width: 1100px){
+            height: 400px;
+        }
     }
     .menuLayout{
         padding-bottom: 40px;
@@ -324,6 +359,12 @@ figcaption{
                 }
             }
         }
+        .desktop-layout{
+            @media screen and (min-width: 1100px){
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
         button{
         @include btn;
         margin: 60px auto 0px;
@@ -342,6 +383,9 @@ figcaption{
 article{
     width: $widthTle;
     margin: 0 auto;
+    @media screen and (min-width: 600px) and (max-width: 1099px){
+    width: 550px;
+    }
     h5{
         font-weight: lighter;
         font-size: 17px;
@@ -367,6 +411,9 @@ article{
     opacity: 0%;
     overflow: hidden;
     cursor: pointer;
+    @media screen and (min-width: 600px) and (max-width: 1099px){
+      padding: 1% 30% 1% 5%;
+    }
     h6{
         font-size: 16px;
         font-weight: bold;
@@ -423,6 +470,9 @@ article{
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        @media screen and (min-width: 600px) and (max-width: 1099px){
+            width: 300px;
+          }
         }
     &:hover > .price {
         transform: translateX(-70px);

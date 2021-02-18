@@ -46,7 +46,14 @@ footer {
 }
 
 footer ul {
+  width: 335px;
   margin: auto;
+}
+
+@media screen and (min-width: 600px) {
+  footer ul {
+    width: 200px;
+  }
 }
 
 footer li {
@@ -75,8 +82,22 @@ footer .fa-hands-helping {
 
 /*Css pour Index.html*/
 h2 {
-  width: 340px;
+  width: 335px;
   margin: 35px auto 25px;
+}
+
+@media screen and (min-width: 1000px) {
+  h2 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+  }
 }
 
 .loader {
@@ -233,6 +254,16 @@ h2 {
   margin-bottom: 70px;
 }
 
+@media screen and (min-width: 1000px) {
+  .layoutFonctionnement {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .layoutFonctionnement button {
   border: transparent;
   display: -webkit-box;
@@ -250,8 +281,15 @@ h2 {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  padding: 10px 15px 10px 30px;
+  padding: 25px 15px 25px 30px;
   color: grey;
+}
+
+@media screen and (min-width: 1000px) {
+  .layoutFonctionnement button {
+    width: 30%;
+    padding: 2% 2% 2% 3%;
+  }
 }
 
 .layoutFonctionnement button:hover {
@@ -259,7 +297,7 @@ h2 {
   color: #9356DC;
 }
 
-.layoutFonctionnement button:hover p {
+.layoutFonctionnement button:hover .text {
   color: black;
 }
 
@@ -268,7 +306,7 @@ h2 {
   margin-left: 4px;
 }
 
-.layoutFonctionnement button span {
+.layoutFonctionnement button .numbers {
   border: 2px solid transparent;
   color: white;
   background-color: #9356DC;
@@ -280,7 +318,7 @@ h2 {
   bottom: 25px;
 }
 
-.layoutFonctionnement button p {
+.layoutFonctionnement button .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -295,9 +333,19 @@ h2 {
   padding-bottom: 50px;
 }
 
+@media screen and (min-width: 1000px) {
+  .container2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .container2 figure {
   margin: auto;
-  width: 340px;
+  width: 335px;
   border: transparent;
   -webkit-box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.212);
           box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.212);
@@ -305,6 +353,14 @@ h2 {
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
+}
+
+@media screen and (min-width: 800px) {
+  .container2 figure {
+    width: 40%;
+    height: 20%;
+    margin: 2% auto;
+  }
 }
 
 .container2 figure .new {
@@ -319,10 +375,16 @@ h2 {
 }
 
 .container2 figure img {
-  width: 340px;
+  width: 335px;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media screen and (min-width: 800px) {
+  .container2 figure img {
+    width: 100%;
+  }
 }
 
 figcaption {
@@ -382,6 +444,12 @@ figcaption svg:hover {
   margin-bottom: -50px;
 }
 
+@media screen and (min-width: 1100px) {
+  .restaurantPage img {
+    height: 400px;
+  }
+}
+
 .restaurantPage .menuLayout {
   padding-bottom: 40px;
   border: transparent;
@@ -400,7 +468,7 @@ figcaption svg:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 340px;
+  width: 335px;
   margin: 0px auto -20px;
   padding-top: 15px;
   -webkit-box-pack: justify;
@@ -429,6 +497,16 @@ figcaption svg:hover {
           animation: heart 1s both;
 }
 
+@media screen and (min-width: 1100px) {
+  .restaurantPage .menuLayout .desktop-layout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .restaurantPage .menuLayout button {
   border: transparent;
   display: -webkit-box;
@@ -453,8 +531,14 @@ figcaption svg:hover {
 }
 
 article {
-  width: 340px;
+  width: 335px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1099px) {
+  article {
+    width: 550px;
+  }
 }
 
 article h5 {
@@ -469,7 +553,7 @@ article h5 {
 .menuContainer {
   border: transparent;
   background-color: white;
-  width: 340px;
+  width: 335px;
   height: 70px;
   padding-left: 10px;
   border-radius: 18px;
@@ -485,6 +569,12 @@ article h5 {
   opacity: 0%;
   overflow: hidden;
   cursor: pointer;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1099px) {
+  .menuContainer {
+    padding: 1% 30% 1% 5%;
+  }
 }
 
 .menuContainer h6 {
@@ -563,6 +653,12 @@ article h5 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1099px) {
+  .menuContainer:hover > .ellipsis {
+    width: 300px;
+  }
 }
 
 .menuContainer:hover > .price {
