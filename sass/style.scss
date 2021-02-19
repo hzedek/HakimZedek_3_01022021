@@ -150,14 +150,28 @@ h2{
 }
 .search{
     @include center;
+    align-items: baseline;
     border-top: transparent;
     background: rgba(216, 216, 216, 0.514);
     box-shadow:inset 5px 13px 5px -10px rgba(172, 172, 172, 0.514);
     padding: 15px;
     margin-bottom: 0px;
-    .fa-map-marker-alt{
-        margin-right: 20px;
+    margin-top: 10px;
+    input{
+        border: none;
+        background:rgba(216, 216, 216, 0) ;
+        font-size: 18px;
+        font-weight: 500;
+        width: 150px;
+        &::placeholder{
+            opacity: 100%;
+            color: black;}
     }
+}
+.fa-map-marker-alt{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 17px;
 }
 .container{
     @include container;
