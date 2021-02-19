@@ -190,6 +190,7 @@ h2{
 }
 .layoutFonctionnement{
     margin-bottom: 70px;
+    outline: none;
     @media screen and (min-width:1000px){
         display: flex;
         flex-wrap: wrap;
@@ -235,6 +236,7 @@ h2{
             display: flex;
             margin-left: 30px;
             color: black;
+            font-weight: 500;
         }
     }
 }
@@ -339,8 +341,8 @@ figcaption{
             align-items:baseline;
             display: flex;
             width:$widthTle;
-            margin:0px auto -20px;
-            padding-top: 15px;
+            margin:0px auto -40px;
+            padding-top: 10px;
             justify-content: space-between;
             &:first-child{
                 font-family:'shrikhandregular';
