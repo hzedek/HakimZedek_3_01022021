@@ -138,8 +138,8 @@ h2 {
 
 @-webkit-keyframes loading {
   0% {
-    -webkit-transform: 0deg;
-            transform: 0deg;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
@@ -149,8 +149,8 @@ h2 {
 
 @keyframes loading {
   0% {
-    -webkit-transform: 0deg;
-            transform: 0deg;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
@@ -448,7 +448,7 @@ figcaption h3 {
 
 figcaption svg {
   fill: #9356DC;
-  fill-opacity: 0%;
+  fill-opacity: 0;
   stroke: black;
   stroke-width: 20px;
   height: 23px;
@@ -520,7 +520,7 @@ figcaption svg:hover {
 .restaurantPage .menuLayout .restaurantName svg {
   fill: #9356DC;
   /*linear-gradient(to bottom, #e56ddbd0, #dc69dcd0, #d266dccb, #ca63dcd0, #c160dcd2, #b65ddccc, #ab5bdcd0, #9e58dcc9, #9256dcc4);*/
-  fill-opacity: 0%;
+  fill-opacity: 0;
   stroke: black;
   stroke-width: 20px;
   height: 23px;
@@ -786,32 +786,32 @@ article h5 {
 
 @-webkit-keyframes heart {
   0% {
-    fill-opacity: 0%;
+    fill-opacity: 0;
   }
   24% {
-    fill-opacity: 20%;
+    fill-opacity: 0.2;
   }
   46% {
-    fill-opacity: 50%;
+    fill-opacity: 0.5;
   }
   100% {
-    fill-opacity: 100%;
+    fill-opacity: 1;
     stroke: #9356DC;
   }
 }
 
 @keyframes heart {
   0% {
-    fill-opacity: 0%;
+    fill-opacity: 0;
   }
   24% {
-    fill-opacity: 20%;
+    fill-opacity: 0.2;
   }
   46% {
-    fill-opacity: 50%;
+    fill-opacity: 0.5;
   }
   100% {
-    fill-opacity: 100%;
+    fill-opacity: 1;
     stroke: #9356DC;
   }
 }

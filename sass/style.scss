@@ -132,7 +132,7 @@ h2{
 }
 @keyframes loading{
     0%{
-        transform:(0deg) ;
+        transform:rotate(0deg) ;
     }
     100%{
         transform:rotate(360deg);   
@@ -311,7 +311,7 @@ figcaption{
     }
     svg{
         fill: $primary;
-        fill-opacity: 0%;
+        fill-opacity:0;
         stroke: black;
         stroke-width: 20px;
         height: 23px;
@@ -364,7 +364,7 @@ figcaption{
             }
             svg{
                 fill:$primary;/*linear-gradient(to bottom, #e56ddbd0, #dc69dcd0, #d266dccb, #ca63dcd0, #c160dcd2, #b65ddccc, #ab5bdcd0, #9e58dcc9, #9256dcc4);*/
-                fill-opacity: 0%;
+                fill-opacity: 0;
                 stroke: black;
                 stroke-width: 20px;
                 height: 23px;
@@ -526,16 +526,16 @@ article{
 }
 @keyframes heart{
     0% {
-        fill-opacity: 0%;
+        fill-opacity: 0;
     }
     24% {
-        fill-opacity: 20%;
+        fill-opacity: 0.2;
     }
     46% {
-        fill-opacity: 50%;
+        fill-opacity: 0.5;
     }
     100% {
-        fill-opacity: 100%;
+        fill-opacity: 1;
         stroke: $primary;
     }
 }
